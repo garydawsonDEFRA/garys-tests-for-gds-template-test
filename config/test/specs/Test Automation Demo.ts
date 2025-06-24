@@ -109,6 +109,10 @@ describe('Test Automation Demo tests', () => {
         await CheckboxPage.continueButton.click();
         await browser.execute(() => (document.querySelector('.govuk-back-link') as HTMLElement)?.click());
         await expect(browser).toHaveUrl(getFullUrl('checkbox'));
+        await browser.execute(() => (document.querySelector('.govuk-back-link') as HTMLElement)?.click());
+        await expect(browser).toHaveUrl(getFullUrl('radio'));
+        await browser.execute(() => (document.querySelector('.govuk-back-link') as HTMLElement)?.click());
+        await expect(browser).toHaveUrl(getFullUrl('input'));
     });
     it('should check the change links on the summary page', async () => {
         await navigateToCheckboxPage();
