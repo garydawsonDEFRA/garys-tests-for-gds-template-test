@@ -4,22 +4,22 @@ import Page from './page';
 /**
  * Page object for the input page at localhost:3000/input-page
  */
-class InputPage extends Page {
+class RadioPage extends Page {
     /**
      * Define input page selectors
      */
     public get pageTitle () {
         return $('h1');
     }
-
-    public get inputField () {
-        return $('input');
+    public get radioButtons () {
+        return $$('input[type="radio"]');
     }
-
+    public get radioButtonsLabels () {
+        return $$('label');
+    }
     public get continueButton () {
         return $('button[type="submit"], input[type="submit"], .govuk-button:not(.govuk-back-link)');
     }
-
     public get backLink () {
         return $('.govuk-back-link');
     }
@@ -31,20 +31,27 @@ class InputPage extends Page {
     public get errorSummary () {
         return $('.govuk-error-summary');
     }
-
     /**
      * Form input methods
      */
-    public async setInputField (value: string) {
-        await this.inputField.setValue(value);
+    public async setradioButton (value: string) {
+        const radios = await this.radioButtons;
+        for (const radio of radios) {
+            const radioValue = await radio.getAttribute('value');
+            if (radioValue === value) {
+                await radio.click();
+                break;
+            }
+        }
     }
 
     /**
-     * Open the input page
+     * Open the radio page
      */
     public open () {
-        return super.open('input-page');
+        return super.open('radio-page');
     }
 }
 
-export default new InputPage();
+export default new RadioPage();
+
