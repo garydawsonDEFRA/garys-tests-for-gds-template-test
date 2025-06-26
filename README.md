@@ -63,23 +63,23 @@ garys-tests-for-gds-template-test/
 │   │   │   └── submit.page.ts       # Final submission page
 │   │   └── specs/
 │   │       └── Test Automation Demo.ts  # Main test suite
-│   ├── wdio.conf.ts                 # WebdriverIO configuration
-│   ├── tsconfig.json                # TypeScript config for tests
-│   ├── package.json                 # Test dependencies
-│   └── package-lock.json            # Dependency lock file
+│   └── wdio.conf.ts                 # WebdriverIO configuration
 ├── .gitignore                       # Git ignore rules
 ├── README.md                        # Project documentation
-├── package.json                     # Root dependencies
-├── package-lock.json                # Root dependency lock file
-└── tsconfig.json                    # Root TypeScript config
+├── package.json                     # All project dependencies
+├── package-lock.json                # Dependency lock file
+├── node_modules/                    # Installed dependencies
+└── tsconfig.json                    # TypeScript configuration
 ```
 
-### Package Structure Note
-This project has duplicate npm files due to separate dependency management:
-- **Root level** (`/package.json`, `/package-lock.json`, `/node_modules/`) - Main project dependencies
-- **Config level** (`/config/package.json`, `/config/package-lock.json`, `/config/node_modules/`) - WebdriverIO specific dependencies
+### Simplified Structure
+This project uses a **consolidated dependency structure**:
+- **Single package.json** - All dependencies managed at root level
+- **Single node_modules** - One central location for all packages  
+- **Single tsconfig.json** - Unified TypeScript configuration
+- **Clean organization** - Test files organized in config/test/ directory
 
-This structure was created when WebdriverIO was set up in a separate config directory. Both dependency trees are currently functional but could be consolidated in future refactoring to simplify the project structure.
+This simplified structure eliminates duplicate files and makes dependency management easier.
 
 ## Test Structure
 

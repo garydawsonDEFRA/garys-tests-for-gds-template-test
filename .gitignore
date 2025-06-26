@@ -39,4 +39,5 @@ Thumbs.db
 
 # WebdriverIO specific
 errorShots/
-wdio-*.log
+wdio-*.lognode_modules/
+node_modules
