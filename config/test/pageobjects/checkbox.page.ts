@@ -6,7 +6,7 @@ import Page from './page';
  */
 class CheckboxPage extends Page {
     /**
-     * Define input page selectors
+     * Define checkbox page selectors
      */
     public get pageTitle () {
         return $('h1');

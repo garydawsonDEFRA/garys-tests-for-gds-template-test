@@ -113,5 +113,5 @@ This simplified structure eliminates duplicate files and makes dependency manage
 
 ## Troubleshooting
 - Ensure the web app is running before executing tests
-- Check Chrome browser is installed and up to date
+- Check browsers are installed and up to date
 - Verify Node.js version compatibility

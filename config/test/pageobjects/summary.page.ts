@@ -2,11 +2,11 @@ import { $ } from '@wdio/globals'
 import Page from './page';
 
 /**
- * Page object for the input page at localhost:3000/input-page
+ * Page object for the input page at localhost:3000/summary-page
  */
 class SummaryPage extends Page {
     /**
-     * Define input page selectors
+     * Define summary page selectors
      */
     public get pageTitle () {
         return $('h1');
