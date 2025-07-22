@@ -58,9 +58,6 @@ capabilities: [
     {
         browserName: 'firefox'
     },
-    {
-        browserName: 'MicrosoftEdge'
-    }
 ],
 
     //

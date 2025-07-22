@@ -5,6 +5,7 @@ Webdriver IO test framework for gds-template-test practice web app
 - Node.js (v16 or higher)
 - npm or yarn
 - Chrome browser
+- Firefox browser
 
 ## Getting Started
 
@@ -38,14 +39,14 @@ The web app should now be running on `http://localhost:3000`
 
 ### 4. Run Tests
 ```bash
-# Run all tests across Chrome, Firefox, and Edge
+# Run all tests across Chrome & Firefox.
 npm test
 
 # Run specific test file in all browsers
 npx wdio run config/wdio.conf.ts --spec="config/test/specs/Test Automation Demo.ts"
 ```
 
-**Cross-Browser Testing:** Tests automatically run in parallel across Chrome, Firefox, and Microsoft Edge to ensure cross-browser compatibility.
+**Cross-Browser Testing:** Tests automatically run in parallel across Chrome & Firefox to ensure cross-browser compatibility.
 
 ## Project Structure
 
@@ -105,7 +106,7 @@ This simplified structure eliminates duplicate files and makes dependency manage
 - `urls.ts` - Centralized URL management
 
 ## Configuration
-- Tests run in **Chrome, Firefox, and Microsoft Edge** simultaneously
+- Tests run in **Chrome & Firefox** simultaneously
 - Base URL: `http://localhost:3000`
 - Timeout: 60 seconds per test
 - Framework: Mocha with WebdriverIO
